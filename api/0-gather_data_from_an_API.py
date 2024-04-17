@@ -18,3 +18,11 @@ def get_employee(argv):
 
     total_tasks = len(todos)
     print(f"Employee {user['name']} is done with tasks ({task_completed}/{total_tasks}):")
+
+    for todo in todos:
+        if todo['completed']:
+            print(f"\t {todo['title']}")
+
+if __name__ == "__main__":
+    import sys
+    get_employee(sys.argv)
