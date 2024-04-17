@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """task 1"""
 
-
-import requests
 import csv
+import requests
 
 
 def exportdata(argv):
@@ -19,7 +18,7 @@ def exportdata(argv):
     filename = f"{employee_id}.csv"
 
     with open(filename, mode='w', newline='') as file:
-        writer = csv.writer(file)
+        writer = csv.writer(file, quoting=csv.QUOTE_ALL)
 
         for todo in todos:
             writer.writerow([user['id'], user['name'],
