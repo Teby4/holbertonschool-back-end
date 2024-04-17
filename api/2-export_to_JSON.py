@@ -20,10 +20,10 @@ def exportdata(argv):
     tasks = []
     for todo in todos:
         task = {
-            "task": todos.get('title'),
-            "completed": todos.get('completed'),
-            "username": user.get('username')
-            }
+            'task': todo.get('title'),
+            'completed': todo.get('completed'),
+            'username': user.get('username')
+        }
         tasks.append(task)
 
     data = {
