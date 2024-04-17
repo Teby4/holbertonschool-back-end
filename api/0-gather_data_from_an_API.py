@@ -18,7 +18,7 @@ def get_employee(argv):
 
     task_completed = 0
     for todo in todos:
-        if todo.get['completed']:
+        if todo.get('completed'):
             task_completed += 1
 
     total_tasks = len(todos)
@@ -26,7 +26,7 @@ def get_employee(argv):
           f"({task_completed}/{total_tasks}):")
 
     for todo in todos:
-        if todo.get['completed']:
+        if todo.get('completed'):
             print(f"\t {todo['title']}")
 
 
