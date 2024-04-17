@@ -22,12 +22,12 @@ def get_employee(argv):
             task_completed += 1
 
     total_tasks = len(todos)
-    print(f"Employee {user['name']} is done with tasks"
+    print(f"Employee {user.get('name')} is done with tasks"
           f"({task_completed}/{total_tasks}):")
 
     for todo in todos:
         if todo.get('completed'):
-            print(f"\t {todo['title']}")
+            print(f"\t {todo.get('title')}")
 
 
 if __name__ == "__main__":
