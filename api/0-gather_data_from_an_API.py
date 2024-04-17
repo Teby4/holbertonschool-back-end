@@ -25,7 +25,7 @@ def get_employee(argv):
 
     for todo in todos:
         if todo['completed']:
-            print(f" \t{todo['title']}")
+            print(f"\t {todo['title']}")
 
 
 if __name__ == "__main__":
