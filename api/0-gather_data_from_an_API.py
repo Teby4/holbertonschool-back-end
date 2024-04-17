@@ -8,12 +8,12 @@ import requests
 
 def get_employee(argv):
     """get empleoye data"""
-    empleoyeid = argv[1]
+    employee_id = argv[1]
     user_link = "https://jsonplaceholder.typicode.com/users/"
-    user_response = requests.get("{}{}".format(user_link, empleoyeid))
+    user_response = requests.get("{}{}".format(user_link, employee_id))
     user = user_response.json()
     todo_link = "https://jsonplaceholder.typicode.com/todos?userId="
-    todo_response = requests.get("{}{}".format(todo_link, empleoyeid))
+    todo_response = requests.get("{}{}".format(todo_link, employee_id))
     todos = todo_response.json()
 
     task_completed = 0
