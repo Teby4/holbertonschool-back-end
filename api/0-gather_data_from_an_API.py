@@ -2,6 +2,7 @@
 """0-gather_data_from_an_API task"""
 
 
+import sys
 import requests
 
 
@@ -30,5 +31,4 @@ def get_employee(argv):
 
 
 if __name__ == "__main__":
-    import sys
     get_employee(sys.argv)
