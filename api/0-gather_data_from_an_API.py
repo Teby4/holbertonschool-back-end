@@ -7,7 +7,12 @@ import requests
 
 
 def get_employee(argv):
-    """get empleoye data"""
+    """Get employee data and print completed tasks.
+
+    Args:
+        argv (list): List of command-line arguments, where the first argument is
+                     the employee ID.
+    """
     empleoyeid = argv[1]
     userlink = "https://jsonplaceholder.typicode.com/users/"
     user_response = requests.get("{}{}".format(userlink, empleoyeid))
