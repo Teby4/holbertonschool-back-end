@@ -29,7 +29,7 @@ def exportdata(argv):
     data = {
         employee_id: tasks
     }
-    with open(filename, mode='w', newline='') as file:
+    with open(filename, mode='w') as file:
         json.dump(data, file)
 
 
