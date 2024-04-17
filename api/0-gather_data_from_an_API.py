@@ -31,4 +31,7 @@ def get_employee(argv):
 
 
 if __name__ == "__main__":
-    get_employee(sys.argv)
+    if len(sys.argv) == 2:
+        get_employee(sys.argv[1])
+    else:
+        print("Error:")
