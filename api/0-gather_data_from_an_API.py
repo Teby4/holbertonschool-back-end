@@ -32,4 +32,4 @@ def get_employee(argv):
 
 if __name__ == "__main__":
     if len(sys.argv) == 2:
-        get_employee(sys.argv[1])
+        get_employee(sys.argv)
