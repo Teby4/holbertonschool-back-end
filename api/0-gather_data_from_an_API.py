@@ -1,11 +1,12 @@
 #!/usr/bin/python3
+"""0-gather_data_from_an_API task"""
 
 
 import requests
-import json
 
 
 def get_employee(argv):
+    """get empleoye data"""
     empleoyeid = argv[1]
     userlink = "https://jsonplaceholder.typicode.com/users/"
     user_response = requests.get("{}{}".format(userlink, empleoyeid))
