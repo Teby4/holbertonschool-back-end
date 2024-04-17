@@ -6,9 +6,11 @@ import json
 
 def get_employee(argv):
     empleoyeid = argv[1]
-    user_response = requests.get("https://jsonplaceholder.typicode.com/users/{}".format(empleoyeid))
+    user_response = requests.get("https://jsonplaceholder.typicode.com/users/{}"
+                                 .format(empleoyeid))
     user = user_response.json()
-    todo_response = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}".format(empleoyeid))
+    todo_response = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}"
+                                 .format(empleoyeid))
     todos = todo_response.json()
 
     task_completed = 0
