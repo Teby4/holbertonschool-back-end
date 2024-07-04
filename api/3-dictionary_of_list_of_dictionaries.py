@@ -2,13 +2,13 @@
 """0-gather_data_from_an_API task"""
 
 
+import json
 import sys
 import requests
-import json
 
 
 def dictlist(argv):
-    """get empleoye data"""
+    """get all empleoyees datas"""
     users_url = 'https://jsonplaceholder.typicode.com/users'
     todos_url = 'https://jsonplaceholder.typicode.com/todos'
     users_response = requests.get(users_url)
