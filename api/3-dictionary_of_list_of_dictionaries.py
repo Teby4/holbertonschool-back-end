@@ -6,6 +6,7 @@ import sys
 import requests
 import json
 
+
 def dictlist(argv):
     """get empleoye data"""
     users_url = 'https://jsonplaceholder.typicode.com/users'
@@ -16,12 +17,12 @@ def dictlist(argv):
     todos = todos_response.json()
 
     all_users_tasks = {}
-    
+
     for user in users:
         user_id = user['id']
         username = user['username']
         user_tasks = []
-        
+
         for task in todos:
             if task['userId'] == user_id:
                 task_info = {
@@ -30,11 +31,12 @@ def dictlist(argv):
                     "completed": task['completed']
                 }
                 user_tasks.append(task_info)
-        
+
         all_users_tasks[user_id] = user_tasks
-    
+
     with open('todo_all_employees.json', 'w') as json_file:
         json.dump(all_users_tasks, json_file)
+
 
 if __name__ == "__main__":
     dictlist(sys.argv)
