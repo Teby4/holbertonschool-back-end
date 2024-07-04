@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-"""0-gather_data_from_an_API task"""
-
+"""3-dictionary_of_list_of_dictionaries"""
 
 import json
-import sys
 import requests
+import sys
 
 
 def dictlist(argv):
-    """get all empleoyees datas"""
+    """get all employees data"""
     users_url = 'https://jsonplaceholder.typicode.com/users'
     todos_url = 'https://jsonplaceholder.typicode.com/todos'
     users_response = requests.get(users_url)
@@ -19,16 +18,16 @@ def dictlist(argv):
     all_users_tasks = {}
 
     for user in users:
-        user_id = user['id']
-        username = user['username']
+        user_id = user.get('id')
+        username = user.get('username')
         user_tasks = []
 
         for task in todos:
-            if task['userId'] == user_id:
+            if task.get('userId') == user_id:
                 task_info = {
                     "username": username,
-                    "task": task['title'],
-                    "completed": task['completed']
+                    "task": task.get('title'),
+                    "completed": task.get('completed')
                 }
                 user_tasks.append(task_info)
 

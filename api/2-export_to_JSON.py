@@ -26,9 +26,6 @@ def exportdata(argv):
         }
         tasks.append(task)
 
-    data = {
-        employee_id: tasks
-    }
     with open(filename, mode='w') as file:
         json.dump(data, file)
 

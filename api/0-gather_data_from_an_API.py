@@ -2,8 +2,8 @@
 """0-gather_data_from_an_API task"""
 
 
-import sys
 import requests
+import sys
 
 
 def get_employee(argv):
